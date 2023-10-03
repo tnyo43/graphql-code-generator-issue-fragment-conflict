@@ -1,9 +1,10 @@
 type Query {
-    user(id: ID!): User!
+  user(id: ID!): User!
 }
 
 type User {
-    id: ID!
-    username: String!
-    email: String!
+  id: ID!
+  username: String!
+  avatarUrl: String!
+  email: String!
 }
