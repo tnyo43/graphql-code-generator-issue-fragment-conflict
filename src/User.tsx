@@ -1,5 +1,3 @@
-import { UserWithAvatar_UserFragment } from "./USerWithAvatar";
-import { UserContact_UserFragment } from "./UserContact";
 import { graphql, makeFragmentData } from "./gql";
 
 export const User_UserFragment = graphql(`
@@ -11,15 +9,10 @@ export const User_UserFragment = graphql(`
 
 const mockData = makeFragmentData(
   {
-    ...makeFragmentData(
-      {
-        username: "aaa",
-        avatarUrl: "aaa",
-        id: "user_1",
-      },
-      UserWithAvatar_UserFragment
-    ),
-    ...makeFragmentData({ email: "a", id: "a" }, UserContact_UserFragment),
+    id: "user_1",
+    username: "aaa",
+    avatarUrl: "aaa",
+    email: "mail@mail.com",
   },
   User_UserFragment
 );
